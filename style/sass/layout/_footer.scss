@@ -1,0 +1,17 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+
+
+#footer {
+  background: $charcoal-color;
+  color: $white-color;
+}
+
+.footer {
+  padding: 2rem;
+  text-align: center;
+  & p {
+    margin: 0;
+  }
+}

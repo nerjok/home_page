@@ -1,0 +1,83 @@
+#portfolio {
+  background-image: url(../../../images/geometry2.png);
+  background-attachment: fixed;
+
+  background: #cad1c5;
+}
+
+.portfolio {
+  @include container-width;
+  padding: 2rem;
+  min-height: 30vh;
+
+  &__card {
+    //overflow: hidden;
+    padding: 0;
+    height: 20rem;
+    background: lightcyan;
+    position:relative;
+    overflow: hidden;
+    //border: 1px solid black;
+    //border-radius: 4px;
+    transition: all .6s ease-out;
+
+    -webkit-box-shadow: 2px 6px 12px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 6px 12px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 6px 12px 0px rgba(0,0,0,0.75);
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      background: gray;
+      transition: all .6s ease-out;
+    }
+
+    &:hover  .portfolio__card__img {
+      filter:  brightness(30%);
+    }
+
+
+
+    &__caption {
+      position: absolute;
+      top: -55%;
+      height:0;
+      //bottom: -50%;
+      //left: 5%;
+      transition: all 1s;
+      width: 100%;
+      background: rgba(19, 18, 18, 0.75);
+      opacity: 0;
+      color: #fff;
+      padding:8px;
+      text-align: center;
+      //transform: translate(-50%, 20%);
+       & small {
+         font-size: .8rem;
+       }
+    }
+
+    &:hover {
+      -webkit-box-shadow: 2px 6px 12px 0px rgba(0,0,0,0.75);
+      -moz-box-shadow: 2px 6px 12px 0px rgba(0,0,0,0.75);
+      box-shadow: 2px 6px 12px 0px rgba(0,0,0,0.75);
+      transform: translateY(-3px);
+    }
+
+    &:focus,
+    &:active {
+      transform: translateY(-1px);
+    }
+
+    &:hover  &__caption { 
+      position: absolute;
+      top: 0%;
+      //bottom:0%;
+      opacity: 1;
+      height:30%;
+      z-index: 100;
+      //left: 5%;
+    }
+  }
+}

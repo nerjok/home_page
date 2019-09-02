@@ -1,0 +1,67 @@
+.css-typing {
+  //background: rgb(245, 193, 114);
+  //background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(40, 180, 133, 0.7)), to(rgba(25, 124, 91, 0.7)));  -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  //color: rgb(0, 0, 0);
+  color: #fff;
+  padding: 0 .5rem;
+display: inline-block;
+  animation-name: moveInRight;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+
+  & p {
+    border-right: .15em solid orange;
+    font-family: "Courier";
+    font-size: 1.2rem;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  & p:nth-child(1) {
+    width: 15.8em;
+    opacity: 0;
+    -webkit-animation: type3 2s steps(20, end), blink .5s step-end infinite alternate;
+    animation: type3 2s steps(20, end), blink .5s step-end infinite alternate;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+
+  }
+}
+
+@keyframes type3 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes type3 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+@-webkit-keyframes blink {
+  50% {
+    border-color: tranparent;
+  }
+}

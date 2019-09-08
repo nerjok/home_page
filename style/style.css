@@ -620,8 +620,7 @@ p {
     margin: 0; }
 
 .navigation {
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   top: 0px;
   left: 0;
   right: 0;

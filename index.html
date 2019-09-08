@@ -43,9 +43,8 @@
       </div>
     </div>
 
-    <section class="header">
+    <section class="header" name="main">
 
-    </div>
     <div class="header__movie">
 
       <video class="header__movies" autoplay muted loop>
@@ -64,7 +63,7 @@
       </div>
     </section>
     
-    <section>
+    <section name="about-me">
     <div id="about-me">
 
       <div class="about-me">
@@ -156,7 +155,8 @@
     </div>
   </section>
 
-    <section id="services">
+    <section name="services">
+      <div id="services">
       <div class="services">
         <div class="head__heading head__heading--right">
           <h5 class="heading-color">Services</h5>
@@ -216,9 +216,10 @@
             </div>
         </div>
       </div>
+    </div>
     </section>
     
-    <section id="portfolio">
+    <section id="portfolio" name="portfolio">
       <div class="portfolio">
         <div class="head__heading head__heading">
           <h5 class="heading-color">Working with</h5>
@@ -260,7 +261,7 @@
       </div>
     </section>
     
-    <section name="page-end">
+    <section name="contacts">
     <div id="contacts">
       <div class="contacts">
         <div class="head__heading head__heading--right">
@@ -301,17 +302,17 @@
 
   <script src="https://unpkg.com/one-page-scroll/one-page-scroll.min.js"></script>
   <script>
+    
   document.addEventListener('DOMContentLoaded', function() {
   var app = new onePageScroll({
     el: document.querySelectorAll('section')
     })
     console.log('app', app)
 
-    app.el.addEventListener('inview', function(e) {
-      console.log('kukuk', e)
-  // do something
-})
   })
+  window.addEventListener('locationchange', function(loc){
+    console.log('location changed!', loc);
+})
   </script>
   </body>
 </html>

@@ -10,6 +10,7 @@
     <script>
       window.addEventListener('scroll', function(e) {
         let sY = window.scrollY;
+        console.log(sY);
         if (sY > 180) {
           document.getElementsByClassName('navigation__nav')[0].style.background = '#000';          
           document.getElementsByClassName('to-top')[0].style.opacity = 1;
@@ -27,7 +28,7 @@
     <title>Portfolio | Infos about works and services</title>
   </head>
   <body>
-    <section class="navigation">
+    <div class="navigation">
       <div class="navigation__nav">
         <div class="container" style="position: relative;">
           <h5 class="m-3r heading-color navigation__heading">Portfolios</h5>
@@ -40,7 +41,7 @@
           </div>
           </div>
       </div>
-    </section>
+    </div>
 
     <section class="header">
 
@@ -63,7 +64,8 @@
       </div>
     </section>
     
-    <section id="about-me">
+    <section>
+    <div id="about-me">
 
       <div class="about-me">
         <div class="head__heading">
@@ -92,9 +94,9 @@
           </div>
         </div>
       </div>  
-    </section>
+    </div>
 
-    <section id="experience">
+    <div id="experience">
       <div class="experience">
         <div class="row">
           <div class="col-md-4">
@@ -151,7 +153,8 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
     <section id="services">
       <div class="services">
@@ -257,7 +260,8 @@
       </div>
     </section>
     
-    <section id="contacts">
+    <section name="page-end">
+    <div id="contacts">
       <div class="contacts">
         <div class="head__heading head__heading--right">
           <h5 class="heading-color">Contacts</h5>
@@ -282,13 +286,32 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
   
-    <section id="footer">
+    <div id="footer">
       <div class="footer">
         <p class="p-small">2019 all right reserved please contact for more info.</p>
       </div>
+    </div>
     </section>
+
+
     <div class="to-top" style="opacity: 1;"><a href="#"><i class="fas fa-chevron-up"></i></a> </div>
+
+
+  <script src="https://unpkg.com/one-page-scroll/one-page-scroll.min.js"></script>
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+  var app = new onePageScroll({
+    el: document.querySelectorAll('section')
+    })
+    console.log('app', app)
+
+    app.el.addEventListener('inview', function(e) {
+      console.log('kukuk', e)
+  // do something
+})
+  })
+  </script>
   </body>
 </html>

@@ -2,12 +2,14 @@
   background: #c1ccb8;
   background-image: url(../../../images/geometry2.png);
   background-attachment: fixed;
+  overflow: hidden;
 }
 
 .contacts {
   @include container-width;
   padding: 2rem;
   min-height: 30vh;
+  opacity: 0;
 
 
   &__input {

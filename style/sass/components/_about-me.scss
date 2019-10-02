@@ -1,6 +1,10 @@
+#about-me {
+  overflow:  hidden;
+}
 .about-me {
   min-height: 50vh;
   padding: 1rem;
+  opacity: 0;
  @include container-width;
 
   &__gallery {

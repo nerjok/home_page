@@ -408,6 +408,10 @@ html {
   box-sizing: border-box;
   scroll-behavior: smooth; }
 
+/*
+section {
+  overflow:  hidden;
+}*/
 /**
  * Make all elements from the DOM inherit from the parent box-sizing
  * Since `*` has a specificity of 0, it does not override the `html` value
@@ -507,6 +511,40 @@ p {
     transform: translateY(-3px); }
   100% {
     transform: translateY(3px); } }
+
+@keyframes slideBottomLeft {
+  0% {
+    opacity: 0;
+    transform: translate(7rem, 7rem); }
+  /*
+  80% {
+      transform: translate(-.6rem, -.6rem);
+  }
+*/
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes slideBottomRight {
+  0% {
+    opacity: 0;
+    transform: translate(-7rem, 7rem); }
+  /*
+  80% {
+      transform: translate(.6rem, -.6rem);
+  }*/
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+.sliding-up {
+  animation: slideBottomLeft .8s; }
+
+.sliding-bottom-right {
+  animation: slideBottomRight .8s; }
+
+.slide-show {
+  opacity: 1 !important; }
 
 /**
  * Clear inner floats
@@ -686,9 +724,13 @@ p {
     border-left-color: #fff;
     transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s; }
 
+#about-me {
+  overflow: hidden; }
+
 .about-me {
   min-height: 50vh;
   padding: 1rem;
+  opacity: 0;
   max-width: 65rem;
   margin-left: auto;
   margin-right: auto; }
@@ -726,14 +768,16 @@ p {
 #contacts {
   background: #c1ccb8;
   background-image: url(../../../images/geometry2.png);
-  background-attachment: fixed; }
+  background-attachment: fixed;
+  overflow: hidden; }
 
 .contacts {
   max-width: 65rem;
   margin-left: auto;
   margin-right: auto;
   padding: 2rem;
-  min-height: 30vh; }
+  min-height: 30vh;
+  opacity: 0; }
   .contacts__input {
     width: 100%;
     height: 2.5rem;
@@ -759,13 +803,15 @@ p {
       transform: translateY(1px); }
 
 #experience {
-  background: #f2f2f2; }
+  background: #f2f2f2;
+  overflow: hidden; }
 
 .experience {
   max-width: 65rem;
   margin-left: auto;
   margin-right: auto;
-  padding: 2rem; }
+  padding: 2rem;
+  opacity: 0; }
 
 .prct__full {
   width: 100%;
@@ -786,14 +832,16 @@ p {
 #portfolio {
   background-image: url(../../../images/geometry2.png);
   background-attachment: fixed;
-  background: #cad1c5; }
+  background: #cad1c5;
+  overflow: hidden; }
 
 .portfolio {
   max-width: 65rem;
   margin-left: auto;
   margin-right: auto;
   padding: 2rem;
-  min-height: 30vh; }
+  min-height: 30vh;
+  opacity: 0; }
   .portfolio__card {
     padding: 0;
     height: 20rem;
@@ -887,12 +935,16 @@ p {
   50% {
     border-color: tranparent; } }
 
+#services {
+  overflow: hidden; }
+
 .services {
   max-width: 65rem;
   margin-left: auto;
   margin-right: auto;
   min-height: 30vh;
   padding: 1rem;
+  opacity: 0;
   /* Rounding card **/ }
   .services__card {
     -webkit-box-shadow: 2px 6px 12px 0px rgba(0, 0, 0, 0.75);

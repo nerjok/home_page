@@ -3,12 +3,14 @@
   background-attachment: fixed;
 
   background: #cad1c5;
+  overflow: hidden;
 }
 
 .portfolio {
   @include container-width;
   padding: 2rem;
   min-height: 30vh;
+  opacity: 0;
 
   &__card {
     //overflow: hidden;

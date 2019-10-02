@@ -1,7 +1,11 @@
+#services {
+  overflow:  hidden;
+}
 .services {
   @include container-width;
   min-height: 30vh;
   padding: 1rem;
+  opacity: 0;
 
 
   &__card {
